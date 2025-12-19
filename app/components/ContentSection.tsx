@@ -35,7 +35,12 @@ export function ContentSection() {
       </div>
 
       {/* Button */}
-      <button className="px-6 py-2 border border-gray-400 bg-gray-800 text-white uppercase text-sm font-medium hover:bg-gray-700 transition-colors">
+      <button
+        className="px-6 py-2 bg-white text-black uppercase text-sm font-medium shadow-lg transition-all"
+        style={{
+          clipPath: "polygon(0 0, 100% 0, 100% 85%, 90% 100%, 0 100%)",
+        } as React.CSSProperties}
+      >
         UTILITY
       </button>
     </div>

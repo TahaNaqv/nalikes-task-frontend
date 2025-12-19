@@ -7,10 +7,10 @@ export function FactionCard({
 }: FactionCardProps) {
   return (
     <div
-      className={`min-w-[280px] md:min-w-[320px] h-[200px] md:h-[220px] p-4 md:p-6 bg-gray-900 border transition-all duration-300 cursor-pointer flex flex-col ${
+      className={`min-w-[260px] md:min-w-[300px] h-[180px] md:h-[200px] p-4 md:p-5 bg-black border transition-all duration-300 cursor-pointer flex flex-col transform ${
         isSelected
-          ? "border-white bg-gray-800"
-          : "border-gray-700 hover:border-gray-500"
+          ? "border-gray-500 bg-gray-800 scale-105 z-10"
+          : "border-gray-800 hover:border-gray-700"
       }`}
       onClick={() => onSelect(faction.id)}
     >

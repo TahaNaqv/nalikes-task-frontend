@@ -35,7 +35,7 @@ export function FactionGallery({
     <div className="w-full">
       <div
         ref={scrollContainerRef}
-        className="flex overflow-x-auto scrollbar-hide pb-4 scroll-smooth"
+        className="flex overflow-x-auto scrollbar-hide pt-4 pb-4 scroll-smooth"
       >
         {factions.map((faction) => (
           <div
