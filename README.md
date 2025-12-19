@@ -16,8 +16,6 @@ A futuristic, interactive front-end demo that replicates a "Choose Your Faction"
 - 🔘 **Navigation Dots** - Visual indicators for faction selection with smooth transitions
 - 🔄 **State Synchronization** - Selecting a faction updates the main image display instantly
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
-
 ## Tech Stack
 
 - **React Router v7** - Server-side rendering and routing
@@ -166,7 +164,7 @@ This project is configured for easy deployment on Vercel:
 3. Vercel will auto-detect React Router
 4. Deploy!
 
-**Live Demo**: [Add your Vercel deployment link here]
+**Live Demo**: https://faction-olive.vercel.app
 
 The build output is in the `build/` directory:
 - `build/client/` - Static assets
