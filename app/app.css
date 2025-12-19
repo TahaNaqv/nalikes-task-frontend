@@ -60,23 +60,10 @@ body {
 
 /* Custom Scrollbar Styling */
 .scrollbar-hide {
-  -ms-overflow-style: none;
-  scrollbar-width: thin;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 .scrollbar-hide::-webkit-scrollbar {
-  height: 6px;
-}
-
-.scrollbar-hide::-webkit-scrollbar-track {
-  background: #1a1a1a;
-}
-
-.scrollbar-hide::-webkit-scrollbar-thumb {
-  background: #4a4a4a;
-  border-radius: 3px;
-}
-
-.scrollbar-hide::-webkit-scrollbar-thumb:hover {
-  background: #5a5a5a;
+  display: none; /* Chrome, Safari, Opera */
 }

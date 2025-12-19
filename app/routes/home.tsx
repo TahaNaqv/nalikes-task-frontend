@@ -6,7 +6,7 @@ import { FactionImageDisplay } from "../components/FactionImageDisplay";
 import { FactionGallery } from "../components/FactionGallery";
 import { factions } from "../data/factions";
 
-export function meta({}: Route.MetaArgs) {
+export function meta({ }: Route.MetaArgs) {
   return [
     { title: "Choose Your Faction" },
     {
@@ -48,15 +48,15 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Bottom: Faction Gallery */}
-        <div className="mt-16">
-          <FactionGallery
-            factions={factions}
-            selectedFactionId={selectedFactionId}
-            onSelect={handleFactionSelect}
-          />
-        </div>
+      {/* Bottom: Faction Gallery - Full Width */}
+      <div className="w-full px-4 md:px-6 mt-16">
+        <FactionGallery
+          factions={factions}
+          selectedFactionId={selectedFactionId}
+          onSelect={handleFactionSelect}
+        />
       </div>
     </div>
   );

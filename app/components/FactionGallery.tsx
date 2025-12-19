@@ -36,10 +36,6 @@ export function FactionGallery({
       <div
         ref={scrollContainerRef}
         className="flex gap-4 overflow-x-auto scrollbar-hide pb-4 scroll-smooth"
-        style={{
-          scrollbarWidth: "thin",
-          scrollbarColor: "#4a4a4a #1a1a1a",
-        }}
       >
         {factions.map((faction) => (
           <div
