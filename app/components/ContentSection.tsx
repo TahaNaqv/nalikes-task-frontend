@@ -1,6 +1,6 @@
 export function ContentSection() {
   return (
-    <div className="space-y-6 max-w-2xl">
+    <div className="space-y-6 w-full">
       {/* Heading */}
       <h1 className="text-white">
         <span

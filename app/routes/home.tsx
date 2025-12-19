@@ -33,13 +33,13 @@ export default function Home() {
         {/* Main Content - Split Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-8 lg:gap-12 mb-12 lg:mb-16">
           {/* Left: Content Section */}
-          <div className="flex items-start order-2 lg:order-1">
+          <div className="flex items-center justify-center order-2 lg:order-1">
             <ContentSection />
           </div>
 
           {/* Right: Single Image Display */}
-          <div className="flex items-center justify-center lg:justify-end order-1 lg:order-2">
-            <div className="w-full max-w-2xl">
+          <div className="flex items-center justify-center order-1 lg:order-2">
+            <div className="w-full">
               <FactionImageDisplay faction={selectedFaction} />
             </div>
           </div>
