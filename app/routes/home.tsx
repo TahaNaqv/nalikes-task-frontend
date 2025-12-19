@@ -1,6 +1,5 @@
 import { useState } from "react";
 import type { Route } from "./+types/home";
-import { Header } from "../components/Header";
 import { ContentSection } from "../components/ContentSection";
 import { FactionImageDisplay } from "../components/FactionImageDisplay";
 import { FactionGallery } from "../components/FactionGallery";
@@ -31,9 +30,6 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white">
       <div className="container mx-auto px-4 py-8 md:py-12">
-        {/* Header */}
-        <Header />
-
         {/* Main Content - Split Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-12 lg:mb-16">
           {/* Left: Content Section */}

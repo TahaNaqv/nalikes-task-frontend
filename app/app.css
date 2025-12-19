@@ -13,57 +13,35 @@ body {
   font-family: "Oxanium", sans-serif;
 }
 
-/* Horizontal Slicing Effect - Bars Overlay */
-/* .horizontal-bars-overlay {
-  background: linear-gradient(to bottom,
-      transparent 0%,
-      transparent 12%,
-      rgba(0, 0, 0, 0.4) 12%,
-      rgba(0, 0, 0, 0.4) 16%,
-      transparent 16%,
-      transparent 28%,
-      rgba(0, 0, 0, 0.4) 28%,
-      rgba(0, 0, 0, 0.4) 32%,
-      transparent 32%,
-      transparent 44%,
-      rgba(0, 0, 0, 0.4) 44%,
-      rgba(0, 0, 0, 0.4) 48%,
-      transparent 48%,
-      transparent 60%,
-      rgba(0, 0, 0, 0.4) 60%,
-      rgba(0, 0, 0, 0.4) 64%,
-      transparent 64%,
-      transparent 76%,
-      rgba(0, 0, 0, 0.4) 76%,
-      rgba(0, 0, 0, 0.4) 80%,
-      transparent 80%,
-      transparent 92%,
-      rgba(0, 0, 0, 0.4) 92%,
-      rgba(0, 0, 0, 0.4) 96%,
-      transparent 96%,
-      transparent 100%);
-  pointer-events: none;
-} */
-
 /* Image Reveal Animation */
 .image-reveal-container {
   transition: clip-path 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .image-reveal-hidden {
-  clip-path: inset(0 50% 0 50%); /* Clipped from left and right, showing only center */
+  clip-path: inset(0 50% 0 50%);
+  /* Clipped from left and right, showing only center */
 }
 
 .image-reveal-visible {
-  clip-path: inset(0 0% 0 0%); /* Fully visible, no clipping */
+  clip-path: inset(0 0% 0 0%);
+  /* Fully visible, no clipping */
+}
+
+/* Section-based Sequential Reveal Animation */
+.image-section {
+  transition: clip-path 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Custom Scrollbar Styling */
 .scrollbar-hide {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 .scrollbar-hide::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+  display: none;
+  /* Chrome, Safari, Opera */
 }

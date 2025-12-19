@@ -26,6 +26,21 @@ export function FactionImageDisplay({ faction }: FactionImageDisplayProps) {
 
   if (!displayFaction) return null;
 
+  const sectionHeight = 100 / 6;
+  const numSections = 6;
+  const delayPerSection = 120; // ms delay between each section
+
+  // Create section configurations
+  const sections = Array.from({ length: numSections }, (_, i) => {
+    const topPercent = i * sectionHeight;
+    const bottomPercent = 100 - (i + 1) * sectionHeight;
+    return {
+      top: topPercent,
+      bottom: bottomPercent,
+      delay: i * delayPerSection,
+    };
+  });
+
   return (
     <div
       className="relative w-full aspect-square md:aspect-[4/3] overflow-hidden cursor-pointer"
@@ -40,24 +55,28 @@ export function FactionImageDisplay({ faction }: FactionImageDisplayProps) {
         <img
           src={displayFaction.coverImage}
           alt={`${displayFaction.name} cover`}
-          className="w-full h-full object-contain blur-sm brightness-[0.4]"
-        />
-      </div>
-
-      {/* Inner Image Layer - reveals on hover, clean with no overlays */}
-      <div
-        className={`absolute inset-0 image-reveal-container ${isHovered ? "image-reveal-visible" : "image-reveal-hidden"
-          }`}
-      >
-        <img
-          src={displayFaction.innerImage}
-          alt={`${displayFaction.name} display`}
           className="w-full h-full object-contain"
         />
       </div>
 
-      {/* Horizontal Bars Overlay - always visible on both states */}
-      {/* <div className="absolute inset-0 horizontal-bars-overlay pointer-events-none z-20" /> */}
+      {sections.map((section, index) => (
+        <div
+          key={index}
+          className="absolute inset-0 image-section"
+          style={{
+            clipPath: isHovered
+              ? `inset(${section.top}% 0% ${section.bottom}% 0%)`
+              : `inset(${section.top}% 50% ${section.bottom}% 50%)`,
+            transitionDelay: `${section.delay}ms`,
+          }}
+        >
+          <img
+            src={displayFaction.innerImage}
+            alt={`${displayFaction.name} display section ${index + 1}`}
+            className="w-full h-full object-contain"
+          />
+        </div>
+      ))}
     </div>
   );
 }
